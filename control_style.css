@@ -1,0 +1,12 @@
+#maincontrol{
+    text-align: center;
+    margin-top:100px;
+}
+#maincontrol .col{
+    margin-top:20px;
+}
+.turn-button{
+    margin:5px;
+    width:50px;
+    height:50px;
+}

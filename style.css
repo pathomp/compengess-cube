@@ -1,0 +1,102 @@
+body{
+    background:white;
+}
+#maincontainer{
+    text-align: center;
+}
+#roomlabel{
+    font-size: 1.5em;
+    height:80px;
+    padding:20px;
+    margin-top:20px;    
+}
+#countdown{
+    position: absolute;
+    right:10px;
+    top:10px;
+    width:200px;
+    height:80px;
+    padding:10px;
+    background:yellow;
+    color:brown;
+    border-radius: 8px;
+    text-align: center;
+}
+#timeleft{
+    font-size: 2em;
+    margin: 0 10px;
+}
+.grouppanel{
+    display: inline-block;
+    width:180px;
+    height:220px;
+    text-align: center;
+    margin:5px;
+    background:rgba(0,0,0,0.1);
+    overflow: hidden;
+    border-radius:8px;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,0.4);
+    transition:background-color 1s;
+}
+.grouppanel.error{
+    background:red;
+    color:white;
+}
+
+.cubepanel{
+    width: 100%;
+    height: 180px;
+    position:relative;
+}
+.cube{
+    position: absolute;
+    width:100px;
+    height:100px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 40px;
+}
+.cube-inner{
+    transition: transform 3s;
+    transform: rotate3d(1,1,1,45deg);
+    transform-origin: 50px 50px 50px;
+    -webkit-transform-style: preserve-3d;
+}
+.cube-inner.turned{
+    transform: rotate3d(1,1,1,405deg);
+}
+.face{
+    position: absolute;
+    width:100px;
+    height:100px;
+    border:1px solid black;
+    background: rgba(0,0,0,0.1);
+}
+.grouppanel.error .face{
+    border:1px solid pink;
+    background: rgba(0,0,0,0.1);
+}
+.face.back{
+    transform: translateZ(100px);
+}
+.face.top{
+    transform-origin: top;
+    transform: rotateX(90deg);
+}
+.face.bottom{
+    transform-origin: bottom;
+    transform: rotateX(-90deg);
+}
+.face.left{
+    transform-origin: left;
+    transform: rotateY(-90deg);
+}
+.face.right{
+    transform-origin: right;
+    transform: rotateY(90deg);
+}
+.groupname{
+    width:100%;
+    height:40px;
+    font-size: 1.5em;
+}
